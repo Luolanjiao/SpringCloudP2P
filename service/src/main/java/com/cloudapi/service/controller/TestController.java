@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
     @RequestMapping("sayhi")
-    public String sayHi(User requestParams)  {
-        int[] array= new int[]{1,2,4,5};
-      //  int a=array[5];
+    public String sayHi(User requestParams) {
+        int[] array = new int[]{1, 2, 4, 5};
+        //  int a=array[5];
         System.out.println("执行sayhi===============");
         return "abcdefg";
     }

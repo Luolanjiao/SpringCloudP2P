@@ -3,27 +3,35 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.cloudapi</groupId>
         <artifactId>base</artifactId>
+        <groupId>com.cloudapi</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
-    <packaging>jar</packaging>
-    <!-- <groupId>com.cloudapi</groupId>
-     <version>0.0.1-SNAPSHOT</version>-->
-    <artifactId>center</artifactId>
-    <name>center</name>
+    <groupId>com.cloudapi</groupId>
+    <artifactId>scheduler</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>scheduler</name>
     <description>Demo project for Spring Boot</description>
 
-    <!--<properties>
+    <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Finchley.SR2</spring-cloud.version>
-    </properties>-->
+    </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
         </dependency>
     </dependencies>
 

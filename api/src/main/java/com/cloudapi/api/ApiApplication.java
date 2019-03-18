@@ -14,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 public class ApiApplication {
 
     public static void main(String[] args) {
+        System.out.println("启动了~~~~~~~~~~~~~~~~~~~");
         SpringApplication.run(ApiApplication.class, args);
     }
 

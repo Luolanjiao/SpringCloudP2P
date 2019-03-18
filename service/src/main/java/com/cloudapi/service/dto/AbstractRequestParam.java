@@ -13,5 +13,5 @@ public abstract class AbstractRequestParam {
         this.requstNo = requstNo;
     }
 
-    private String requstNo="";
+    private String requstNo = "";
 }
