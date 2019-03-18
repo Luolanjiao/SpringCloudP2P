@@ -1,6 +1,8 @@
 package com.cloudapi.api.controller;
 
+import com.cloudapi.api.service.IFinanceService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -10,10 +12,12 @@ import org.springframework.web.client.RestTemplate;
  **/
 @RestController
 public class SaySomeController {
-//    @Autowired
-//    RestTemplate restTemplate;
-//
-//    public String sayHi(){
-//        return restTemplate.getForObject("http://localhost:8081",String.class);
-//    }
+
+    @Autowired
+    private IFinanceService iFinanceService;
+
+    @RequestMapping("gettoken")
+    public String getTokenByService(String userid) {
+        return iFinanceService.getToken(userid);
+    }
 }

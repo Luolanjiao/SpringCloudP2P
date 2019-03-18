@@ -1,4 +1,4 @@
-package com.cloudapi.service.dto;
+package com.luolj.dto;
 
 /**
  * @author Jogen

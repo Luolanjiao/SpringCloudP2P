@@ -1,4 +1,4 @@
-package com.cloudapi.service;
+package com.cloudapi;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

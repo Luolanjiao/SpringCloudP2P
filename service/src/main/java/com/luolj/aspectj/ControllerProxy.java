@@ -1,8 +1,8 @@
-package com.cloudapi.service.common;
+package com.luolj.aspectj;
 
 
-import com.cloudapi.service.dto.AbstractRequestParam;
 import com.cloudapi.utils.ModelValidator;
+import com.luolj.dto.AbstractRequestParam;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -18,13 +18,13 @@ import java.lang.annotation.Target;
  * @author Jogen
  * @date 2019/3/16
  */
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class ControllerProxy {
 
     private static Logger logger = LoggerFactory.getLogger(ControllerProxy.class.getName());
 
-    @Pointcut(value = "execution( public * *(..)) && within(com.cloudapi.service.controller.*) ")
+   // @Pointcut(value = "execution( public * *(..)) && within(com.cloudapi.service.controller.*)&&args(com.cloudapi.service.dto.AbstractRequestParam) ")
     private void allPublicMethod() {
     }
 
