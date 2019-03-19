@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.luolj.dao.UserDAO">
-<select id="selectAll" resultType="User">
-SELECT id,`name`,age,CreateTime FROM `User`
-</select>
+    <resultMap id="SimpleUser" type="UserMap">
+        <result column="name" property="userName" jdbcType="VARCHAR"></result>
+        <result column="age" property="userAge" jdbcType="INTEGER"></result>
+    </resultMap>
+    <select id="selectAll" resultType="User">
+        SELECT id,`name`,age,CreateTime
+        FROM `User`
+    </select>
+    <select id="selectUserById" parameterType="String" resultMap="SimpleUser">
+        SELECT `name`,age
+        FROM `User`
+        WHERE id = #{userId}
+    </select>
+    <insert id="insertUser">
+        insert into `user` (id,`name`,age,CreateTime) values
+        <foreach collection="list" item="item" index="index">
+            (#{item.id},#{item.name},#{item.age},#{CreateTime})
+        </foreach>
+
+    </insert>
 </mapper>

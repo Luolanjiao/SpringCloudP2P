@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-//@MapperScan("com.luolj.dao.*.mapper")
+@MapperScan("com.luolj.dao")
 public class ServiceApplication {
 
     public static void main(String[] args) {

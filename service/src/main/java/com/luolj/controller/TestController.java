@@ -2,6 +2,7 @@ package com.luolj.controller;
 
 import com.luolj.dao.UserDAO;
 import com.luolj.entity.User;
+import com.luolj.entity.UserMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,4 +42,10 @@ public class TestController {
     public ArrayList<User> getAllUser(){
         return userDAO.selectAll();
     }
+
+    @RequestMapping("getUserById")
+    public UserMap selectUserById(String userId){
+        return userDAO.selectUserById(userId);
+    }
+
 }

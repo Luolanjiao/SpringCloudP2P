@@ -7,6 +7,14 @@ import java.util.Date;
  * @date 2019/3/18
  */
 public class User {
+
+
+ public User(String name, int age, Date createTime) {
+  this.name = name;
+  this.age = age;
+  CreateTime = createTime;
+ }
+
  public String getName() {
   return name;
  }
