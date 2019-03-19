@@ -1,10 +1,14 @@
 package com.luolj.controller;
 
-import com.luolj.dto.User;
+import com.luolj.dao.UserDAO;
+import com.luolj.entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
 
 /**
  * @author lanjiao.luo
@@ -30,4 +34,11 @@ public class TestController {
         return username+" has address";
     }
 
+
+    @Autowired
+    private UserDAO userDAO;
+    @RequestMapping("/getAllUser")
+    public ArrayList<User> getAllUser(){
+        return userDAO.selectAll();
+    }
 }

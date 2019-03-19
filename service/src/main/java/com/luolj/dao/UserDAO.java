@@ -1,9 +1,15 @@
 package com.luolj.dao;
 
+import com.luolj.entity.User;
+import org.apache.ibatis.annotations.Mapper;
+
+import java.util.ArrayList;
+
 /**
- * @author Jogen
+ * @author luolanjiao
  * @date 2019/3/18
  */
-public class UserDAO {
-    SELECT id,`name`,age,CreateTime FROM `User`
+@Mapper
+public interface UserDAO {
+  ArrayList<User> selectAll();
 }

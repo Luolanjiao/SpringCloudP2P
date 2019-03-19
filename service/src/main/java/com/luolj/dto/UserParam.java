@@ -10,7 +10,7 @@ import java.util.Date;
  * @author Jogen
  * @date 2019/3/17
  */
-public class User extends AbstractRequestParam {
+public class UserParam extends AbstractRequestParam {
     @NotBlank
     @Size(min = 2, message = "您的名字必须有两个字以上")
     private String name;
