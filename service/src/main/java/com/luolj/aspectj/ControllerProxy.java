@@ -24,7 +24,7 @@ public class ControllerProxy {
 
     private static Logger logger = LoggerFactory.getLogger(ControllerProxy.class.getName());
 
-   // @Pointcut(value = "execution( public * *(..)) && within(com.cloudapi.service.controller.*)&&args(com.cloudapi.service.dto.AbstractRequestParam) ")
+    // @Pointcut(value = "execution( public * *(..)) && within(com.cloudapi.service.controller.*)&&args(com.cloudapi.service.dto.AbstractRequestParam) ")
     private void allPublicMethod() {
     }
 

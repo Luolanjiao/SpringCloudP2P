@@ -12,7 +12,9 @@ import java.util.ArrayList;
  */
 //@Mapper
 public interface UserDAO {
-  ArrayList<User> selectAll();
-  UserMap selectUserById(String userId);
-  void insertUser(ArrayList<User> userList);
+    ArrayList<User> selectAll();
+
+    UserMap selectUserById(String userId);
+
+    void insertUser(ArrayList<User> userList);
 }

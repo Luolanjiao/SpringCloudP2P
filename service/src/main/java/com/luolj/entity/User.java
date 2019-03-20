@@ -8,39 +8,48 @@ import java.util.Date;
  */
 public class User {
 
+    private int id;
+    private String name;
+    private int age;
 
- public User(String name, int age, Date createTime) {
-  this.name = name;
-  this.age = age;
-  CreateTime = createTime;
- }
+    public User(int id, String name, int age, Date createTime) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.createTime = createTime;
+    }
 
- public String getName() {
-  return name;
- }
+    private Date createTime;
 
- public void setName(String name) {
-  this.name = name;
- }
+    public int getId() {
+        return id;
+    }
 
- public int getAge() {
-  return age;
- }
+    public void setId(int id) {
+        this.id = id;
+    }
 
- public void setAge(int age) {
-  this.age = age;
- }
+    public String getName() {
+        return name;
+    }
 
- public Date getCreateTime() {
-  return CreateTime;
- }
+    public void setName(String name) {
+        this.name = name;
+    }
 
- public void setCreateTime(Date createTime) {
-  CreateTime = createTime;
- }
+    public int getAge() {
+        return age;
+    }
 
- private String  name;
- private int  age;
- private Date CreateTime;
+    public void setAge(int age) {
+        this.age = age;
+    }
 
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
 }

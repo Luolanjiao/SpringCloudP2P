@@ -6,7 +6,7 @@
         <result column="age" property="userAge" jdbcType="INTEGER"></result>
     </resultMap>
     <select id="selectAll" resultType="User">
-        SELECT id,`name`,age,CreateTime
+        SELECT id,`name`,age,createTime
         FROM `User`
     </select>
     <select id="selectUserById" parameterType="String" resultMap="SimpleUser">
@@ -15,9 +15,9 @@
         WHERE id = #{userId}
     </select>
     <insert id="insertUser">
-        insert into `user` (id,`name`,age,CreateTime) values
+        insert into `User` (id,`name`,age,createTime) values
         <foreach collection="list" item="item" index="index">
-            (#{item.id},#{item.name},#{item.age},#{CreateTime})
+            (#{item.id},#{item.name},#{item.age},#{item.createTime})
         </foreach>
 
     </insert>

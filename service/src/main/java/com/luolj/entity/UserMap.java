@@ -23,5 +23,5 @@ public class UserMap {
         this.userAge = userAge;
     }
 
-    private  String userAge;
+    private String userAge;
 }

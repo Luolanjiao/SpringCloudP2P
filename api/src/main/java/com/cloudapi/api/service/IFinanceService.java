@@ -13,6 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface IFinanceService {
 
     @RequestMapping("getToken")
-    String getToken(@RequestParam(value="userId") String userId);
+    String getToken(@RequestParam(value = "userId") String userId);
 
 }
