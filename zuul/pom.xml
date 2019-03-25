@@ -6,24 +6,24 @@
         <groupId>com.llj</groupId>
         <artifactId>base</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath><!-- lookup parent from repository -->
+        <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>api</artifactId>
-    <name>api</name>
+    <groupId>com.llj</groupId>
+    <artifactId>zuul</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>zuul</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
