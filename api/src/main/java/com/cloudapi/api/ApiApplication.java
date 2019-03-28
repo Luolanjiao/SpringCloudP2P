@@ -23,9 +23,9 @@ public class ApiApplication {
         SpringApplication.run(ApiApplication.class, args);
     }
 
-   /* @Bean
-   //@LoadBalanced
+   @Bean
+   @LoadBalanced
     RestTemplate restTemplate() {
         return new RestTemplate();
-    }*/
+    }
 }
